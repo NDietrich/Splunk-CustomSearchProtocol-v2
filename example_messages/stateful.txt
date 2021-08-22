@@ -1,0 +1,41 @@
+# Receive Initial GETINFO from Splunk
+chunked 1.0,734,0
+{"action":"getinfo","preview":false,"streaming_command_will_restart":false,"searchinfo":{"args":[],"raw_args":[],"dispatch_dir":"C:\\Program Files\\Splunk\\var\\run\\splunk\\dispatch\\1627411403.79","sid":"1627411403.79","app":"custom_search_commands","owner":"admin","username":"admin","session_key":"3UbrQqBugfT2TS4p2WybUI2srfUbFOeoQGbRc_eYYBE0OO1gTBrB22j97k3p5PUBc6XBBTnDHObm5w4vfkEoU94bq7_8ACKGhwKGFtvbVxSCEF353ev2zaWbOAzE","splunkd_uri":"https://127.0.0.1:8089","splunk_version":"8.2.1","search":"search%20index%3Dbeetles%20earliest%3D07%2F27%2F2021%3A00%3A00%3A00%20latest%3D07%2F27%2F2021%3A24%3A00%3A00%20%0A%7C%20doubleage","command":"doubleage","maxresultrows":50000,"earliest_time":"1627333200","latest_time":"1627419600"}}<<EOF>>
+
+# SEND GETINFO TO SPLUNK
+chunked 1.0,45,0 
+{"type":"stateful","required_fields":["age"]}
+
+# Received Execute from Splunk: 
+chunked 1.0,37,85
+{"action":"execute","finished":false}age,"_chunked_idx","__mv_age","__mv__chunked_idx"
+66,0,,
+18,1,,
+25,2,,
+96,3,,
+52,4,,
+
+# send EXECUTE Message with modified data
+chunked 1.0,18,88
+{"finished":false}age,"_chunked_idx","__mv_age","__mv__chunked_idx"
+132,0,,
+36,1,,
+50,2,,
+192,3,,
+104,4,,
+
+# Received Execute from Splunk:
+chunked 1.0,37,50
+{"action":"execute","finished":false}age,"_chunked_idx","__mv_age","__mv__chunked_idx"
+
+# send EXECUTE Message 
+chunked 1.0,18,50
+{"finished":false}age,"_chunked_idx","__mv_age","__mv__chunked_idx"
+
+# Received Execute from Splunk:
+chunked 1.0,36,50
+{"action":"execute","finished":true}age,"_chunked_idx","__mv_age","__mv__chunked_idx"
+
+# Sending EXECUTE SplunkMessage
+(PID:5772) chunked 1.0,17,50
+{"finished":true}age,"_chunked_idx","__mv_age","__mv__chunked_idx"
