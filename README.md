@@ -20,15 +20,17 @@ All messages have a header, metadata, and an optional payload. The header gives 
 Splunk specifies two types of messages using this format: **getinfo** and **execute** messages, and the message type is identified by the *action* field in the json metatdata.  Getinfo messages are for passing information between Splunk and your command, and execute messages are used to pass data (csv-encoded in the payload section of the message) between Splunk and your command. The data passed are the events that your command will operate on before returning to Splunk.  There will be a single getinfo sent from Splunk to your command. Your command will send a single getinfo reply to splunk, and then execute messages will be sent between splunk and your command.
 
 # Layout of this Repository
-[example_messages](./example_messages) directory contans simple examples of the actual text that is written/read from stdin/stdout for different types of custom search commands.
-[presentations](./presentations) directory contains presentations that are helpful in understanding the protocol and implementing it yourself.
-[src](./src) directory contains very simple example code 
+* [example_messages](./example_messages) directory contans simple examples of the actual text that is written/read from stdin/stdout for different types of custom search commands.
+
+* [presentations](./presentations) directory contains presentations that are helpful in understanding the protocol and implementing it yourself.
+
+* [src](./src) directory contains very simple example code 
 
 # Helpful Links
-[Create custom search commands for apps in Splunk Cloud Platform or Splunk Enterprise](https://dev.splunk.com/enterprise/docs/devtools/customsearchcommands/) - A good place to start.
+* [Create custom search commands for apps in Splunk Cloud Platform or Splunk Enterprise](https://dev.splunk.com/enterprise/docs/devtools/customsearchcommands/) - A good place to start.
 
-[CyberChef for Splunk](https://splunkbase.splunk.com/app/5348/) - The Splunk Add-on that I created to implement the Custom Search Protocol in node.js.
+* [CyberChef for Splunk](https://splunkbase.splunk.com/app/5348/) - The Splunk Add-on that I created to implement the Custom Search Protocol in node.js.
 
-[
+* [
 DEV1387B - Deep-Dive Into the Custom Search Protocol v2: How To Implement a Custom Search Command in Any Language](https://conf.splunk.com/learn/session-catalog.html?search=%22Custom%20Search%20Command%22#/) - The Splunk .conf 2021 presentation I gave on the Custom Search Protocol.
 
