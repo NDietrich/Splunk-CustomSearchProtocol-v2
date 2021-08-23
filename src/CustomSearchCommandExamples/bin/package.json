@@ -1,0 +1,27 @@
+{
+  "name": "splunk-custom-search-command-examples",
+  "version": "1.0.0",
+  "description": "Example custom search commands in node.js",
+  "main": "csc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NDietrich/Splunk-CustomSearchProtocol-v2.git"
+  },
+  "keywords": [
+    "splunk"
+  ],
+  "author": "Noah Dietrich noah@SublimeRobots.com",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/NDietrich/Splunk-CustomSearchProtocol-v2/issues"
+  },
+  "homepage": "https://github.com/NDietrich/Splunk-CustomSearchProtocol-v2#readme",
+  "dependencies": {
+    "csv-parse": "^4.16.0",
+    "csv-stringify": "~5.4.0",
+    "stream-transform": "^2.1.0"
+  }
+}
