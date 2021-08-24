@@ -24,8 +24,8 @@ const fs = require('fs');		// write logfiles
 * 			Global Variables
 ******************************************************************************/
 
-var logfile = 'c:\\temp\\debug.log'				// logfile location, defaults to dispatch_dir if not set explicity
-const logFullMessages = true	// output the data read from stdin and written to stdout	
+var logfile = ''				// logfile location, defaults to dispatch_dir if not set explicity
+const logFullMessages = false	// output the data read from stdin and written to stdout	
 
 var searchOptions = null	// all the info from the getinfo json metatdata as a object
 var message = null			// holds the received message (metadata and payload, not the header)
