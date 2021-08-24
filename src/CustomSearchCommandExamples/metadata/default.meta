@@ -34,6 +34,10 @@ export = system
 access = read : [ * ], write : [ * ]
 export = system
 
-
+# make search assistant text visible globally
 [searchbnf]
+export=system
+
+# make all CustomSearchCommands visible globally
+[commands]
 export = system
