@@ -24,7 +24,7 @@ Splunk specifies two types of messages using this format: **getinfo** and **exec
 
 * [presentations](./presentations) directory contains presentations that are helpful in understanding the protocol and implementing it yourself.
 
-* [src](./src) directory contains very simple example code 
+* [src](./src) directory contains an example Splunk app with custom search commands for the four types of commands, as well as a generating command.
 
 # Helpful Links
 * [Create custom search commands for apps in Splunk Cloud Platform or Splunk Enterprise](https://dev.splunk.com/enterprise/docs/devtools/customsearchcommands/) - A good place to start.
