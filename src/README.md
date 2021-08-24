@@ -45,11 +45,11 @@ These custom search commands are all very simple, and are meant to highlight how
 |Input Type     |Uploaded File|
 |File Name		|sample_data.json|
 |Source Type	|\_json|
-|Index			|beetles|
+|Index			|beatles|
 
 Verify you can retreive these 5 events by running the following search:
 ```
-index="beetles" earliest=07/27/2021:00:00:00 latest=07/27/2021:24:00:00
+index="beatles" earliest=07/27/2021:00:00:00 latest=07/27/2021:24:00:00
 ```
 
 Now you should be able to test the included custom search commands with this data.
@@ -59,7 +59,7 @@ Now you should be able to test the included custom search commands with this dat
 This custom search command is a streaming (distributed) custom search command which will double the value of the integer in the 'age' field.
 
 ```
-search index=beetles earliest=07/27/2021:00:00:00 latest=07/27/2021:24:00:00
+search index=beatles earliest=07/27/2021:00:00:00 latest=07/27/2021:24:00:00
 | eval oldage = age
 | doubleage
 | table name, oldage, age
@@ -79,7 +79,7 @@ John|52|104
 This custom search command is a stateful command. Similar to the streaming command, it is not distributed and will only run on the Search head. This command will keep a running total of the sum of the ages for each record, saved in the 'accum_ages' field. Run it as follows:
 
 ```
-index=beetles earliest=07/27/2021:00:00:00 latest=07/27/2021:24:00:00
+index=beatles earliest=07/27/2021:00:00:00 latest=07/27/2021:24:00:00
 | accumages 
 | table name, age, accum_age
 ```
@@ -97,7 +97,7 @@ John|52|257
 ## **sortages** Custom Search Command
 This custom Search Command is an 'events' type of command. This command will sort (re-order) the results based on the value of the 'age' field.  Run the command as follows:
 ```
-index=beetles earliest=07/27/2021:00:00:00 latest=07/27/2021:24:00:00
+index=beatles earliest=07/27/2021:00:00:00 latest=07/27/2021:24:00:00
 | sortages 
 | table name, age
 ```
@@ -114,7 +114,7 @@ Paul|96
 ## **averageage** Custom Search Command
 This is a reporting custom search command. It calculates the average value in the 'age' field for all events (the mean value), and displays only that number (not the events). Run this command as follows:
 ```
-index=beetles earliest=07/27/2021:00:00:00 latest=07/27/2021:24:00:00
+index=beatles earliest=07/27/2021:00:00:00 latest=07/27/2021:24:00:00
 | averageage 
 ```
 Your output will be:
@@ -152,5 +152,5 @@ Start by choosing the .js file for the type of command you want (streaming, stat
 
 You can run your command from the command line as follows:
 ```
-%SPLUNK_HOME%/bin/splunk search "index=beetles | doubleage | table name,age" -app CustomSearchCommandExamples
+%SPLUNK_HOME%/bin/splunk search "index=beatles | doubleage | table name,age" -app CustomSearchCommandExamples
 ```
