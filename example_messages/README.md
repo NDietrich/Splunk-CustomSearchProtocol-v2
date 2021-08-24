@@ -40,21 +40,5 @@ Gives this tabular output in Splunk:
 
 
 
-# Commands
-There are four types of Custom Search Commands (excluding generating commands). This is identified by the **type** field in your getinfo reply to Splunk
-1. Streaming
-2. Stateful
-3. Events
-4. Reporting
 
-Each command has different restrictions and features:
-
-|type       |Global State  |Reorders Events |Transforming   |Needs all results  | Example   |
-|---        |---    |---            |---            |---                |---        |
-|streaming  |No        |No| No| No| eval, where, rex|
-|stateful   |Yes        |No| No| No| accum, streamstats, dedup|
-|events     |Yes        |Yes| No| Yes| sort, eventstats|
-|reporting  |Yes| Yes| Yes| Yes| stats|
-
-Streaming is the most efficient, as it can be distributed (global state is not required). The other commands must run on the search head.  For commands identified that 'reorder events': that's optional.
 
