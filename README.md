@@ -1,5 +1,5 @@
 # About this Repository
-This repository holds resources and example code to document the specifications for Splunk's Custom Search Protocol v2. This message-passing protocol is used with custom search commands in Splunk, and all the information here is based on my reverse-engineering the protocol in order to implement the [CyberChef for Splunk](https://splunkbase.splunk.com/app/5348/) Add-on that implements a custom search command in node.js.  The information here supports my Splunk .conf 2021 presentation on this topic.
+This repository holds resources and example code to document the specifications for Splunk's Custom Search Protocol v2. This message-passing protocol is used with custom search commands in Splunk, and all the information here is based on my reverse-engineering the protocol in order to implement the [CyberChef for Splunk](https://splunkbase.splunk.com/app/5348/) Add-on that implements a custom search command in node.js.  The information here supports my [Splunk .conf 2021 presentation](https://conf.splunk.com/learn/session-catalog.html?search=1387b) on this topic.
 
 This repository is intended to help provide a resource for anyone wanting to implement their own Custom Search Command in Splunk in a language other than Python 3.  If you plan on using Python 3 for your command: you should absolutely use the [Splunk Enterprise SDK for Python](https://github.com/splunk/splunk-sdk-python), rather than implement the protocol yourself.
 
@@ -32,5 +32,5 @@ Splunk specifies two types of messages using this format: **getinfo** and **exec
 * [CyberChef for Splunk](https://splunkbase.splunk.com/app/5348/) - The Splunk Add-on that I created to implement the Custom Search Protocol in node.js.
 
 * [
-DEV1387B - Deep-Dive Into the Custom Search Protocol v2: How To Implement a Custom Search Command in Any Language](https://conf.splunk.com/learn/session-catalog.html?search=%22Custom%20Search%20Command%22#/) - The Splunk .conf 2021 presentation I gave on the Custom Search Protocol.
+DEV1387B - Deep-Dive Into the Custom Search Protocol v2: How To Implement a Custom Search Command in Any Language](https://conf.splunk.com/learn/session-catalog.html?search=1387b) - The Splunk .conf 2021 presentation I gave on the Custom Search Protocol.
 
